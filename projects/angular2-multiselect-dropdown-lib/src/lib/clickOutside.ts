@@ -17,7 +17,13 @@ export class ClickOutsideDirective {
             return;
         }
 
-	const checkTarget = event.composedPath()[2];
+        let checkTarget = event.composedPath()[0];
+        if (event.composedPath().length > 2) {
+       	    let elem = event.composedPath()[2];
+            if (elem instanceof Node) {
+                checkTarget = elem;
+            }
+        }
 
         const clickedInside = this._elementRef.nativeElement.contains(checkTarget);
         if (!clickedInside) {

@@ -1,6 +1,6 @@
 {
   "name": "angular2-multiselect-dropdown",
-  "version": "5.0.4",
+  "version": "5.0.4-shadowroot-3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -33,6 +33,7 @@
     "ngx-highlightjs": "^4.1.3",
     "npm": "^7.9.0",
     "rxjs": "~6.6.0",
+    "sass": "^1.58.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
