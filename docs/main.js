@@ -2693,7 +2693,8 @@ class ClickOutsideDirective {
         if (!targetElement) {
             return;
         }
-        const clickedInside = this._elementRef.nativeElement.contains(targetElement);
+        const checkTarget = event.composedPath()[2];
+        const clickedInside = this._elementRef.nativeElement.contains(checkTarget);
         if (!clickedInside) {
             this.clickOutside.emit(event);
         }
